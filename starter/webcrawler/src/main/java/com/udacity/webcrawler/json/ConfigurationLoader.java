@@ -55,6 +55,7 @@ public final class ConfigurationLoader {
     }catch(IOException e){
       e.printStackTrace();
     }
+    mapper.disable(JsonParser.Feature.AUTO_CLOSE_SOURCE);
     return deserialized;
   }
 }
